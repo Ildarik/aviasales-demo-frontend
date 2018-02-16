@@ -9,56 +9,95 @@ import shopping from "./shopping.svg";
 import history from "./history.svg";
 import nightlife from "./nightlife.svg";
 import family from "./family.svg";
+import "flexboxgrid2";
 
 const Wrapper = styled.section`
   background: #f8fcff;
 `;
-const Categories = styled.ul`
-  list-style: none;
+const Categories = styled.div`
+  margin: 30px 10px;
 `;
-const CategoryIcon = styled.img``;
+const CategoryIcon = styled.img`
+  margin: 10px;
+`;
 const CategoryText = styled.div`
   text-transform: uppercase;
+  font-size: 12px;
+  margin: 10px;
+`;
+
+const CategoryWrapper = styled.a`
+  margin: 0;
+  padding: 0;
 `;
 
 function Category(props) {
   return (
-    <div>
+    <CategoryWrapper>
       <CategoryIcon src={props.src} />
       <CategoryText>{props.text}</CategoryText>
-    </div>
+    </CategoryWrapper>
   );
 }
 
+const Title = styled.p`
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.5;
+  font-style: normal;
+`;
+
+const Compass = styled.img`
+  margin: 40px;
+`;
+
+const City = styled.a`
+  color: #1cade0;
+`;
+
+const Pencil = styled.img`
+  margin-left: 5px;
+`;
+
 export default () => (
   <Wrapper>
-    <img src={compass} alt="" />
-    <p>Популярные направления перелетов из города Москва</p>
-    <img src={pencil} alt="" />
     <div className="container">
-      <Categories>
-        <div className="row">
-          <div className="col-xs-4">
-            <Category src={common} text="куда угодно" />
-          </div>
-          <div className="col-xs-4">
-            <Category src={beach} text="солнце и море" />
-          </div>
-          <div className="col-xs-4">
-            <Category src={shopping} text="шопинг, город" />
-          </div>
-          <div className="col-xs-4">
-            <Category src={history} text="культура и история" />
-          </div>
-          <div className="col-xs-4">
-            <Category src={nightlife} text="ночная жизнь" />
-          </div>
-          <div className="col-xs-4">
-            <Category src={family} text="отдых с детьми" />
-          </div>
+      <div className="row center-xs">
+        <div>
+          <Compass src={compass} alt="" />
         </div>
-      </Categories>
+      </div>
+      <div className="row center-xs">
+        <Title>
+          Популярные направления перелетов из города <City>Москва</City>
+          <Pencil src={pencil} alt="" />
+        </Title>
+      </div>
+      <div className="container">
+        <Categories>
+          <div className="row center-xs">
+            <div className="col-xs-4 col-md-2 col-lg-1">
+              <Category src={common} text="куда угодно" />
+            </div>
+            <div className="col-xs-4 col-md-2 col-lg-1">
+              <Category src={beach} text="солнце и море" />
+            </div>
+            <div className="col-xs-4 col-md-2 col-lg-1">
+              <Category src={shopping} text="шопинг, город" />
+            </div>
+            <div className="col-xs-4 col-md-2 col-lg-1">
+              <Category src={history} text="культура и история" />
+            </div>
+            <div className="col-xs-4 col-md-2 col-lg-1">
+              <Category src={nightlife} text="ночная жизнь" />
+            </div>
+            <div className="col-xs-4 col-md-2 col-lg-1">
+              <Category src={family} text="отдых с детьми" />
+            </div>
+          </div>
+        </Categories>
+      </div>
+      <Destinations />
     </div>
-    <Destinations />
   </Wrapper>
 );
