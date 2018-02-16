@@ -52,7 +52,7 @@ function DestinationRoute(props) {
 function DestinationHeader(props) {
   return (
     <DestinationWrapper>
-      <div class="row middle-xs">
+      <div className="row middle-xs">
         <div className="col-xs-2">
           <img src={props.flag} alt="" />
         </div>
