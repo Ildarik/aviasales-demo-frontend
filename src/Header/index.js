@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components";
-import logo_icon from "./logo-icon.svg";
-// import aero from "./aero-icon.svg";
+import logo from "./logo.svg";
 
 const Wrapper = styled.section`
+  padding-top: 10px;
   background: linear-gradient(
     148.48deg,
     #00b0de 22.46%,
@@ -16,30 +16,57 @@ const Wrapper = styled.section`
 `;
 
 const HeaderTitle = styled.h1`
+  padding-top: 30px;
   color: #ffffff;
+  font-style: normal;
+  font-weight: bold;
+  line-height: normal;
+  font-size: 20px;
+  text-align: center;
 `;
 
 const Button = styled.button`
   background: #ff9241;
   color: #fff;
-  background-image: url(aero);
+  width: 100%;
+  margin-top: 13px;
+  padding: 17px;
+  border: 0;
+`;
+
+const Logo = styled.img``;
+
+const Input = styled.input`
+  width: 100%;
+  padding: 16px 14px;
+  margin-bottom: 1px;
+`;
+
+const Searchform = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 88px;
+`;
+
+const SplitRow = styled.div`
+  display: flex;
 `;
 
 export default () => (
   <Wrapper>
-    <img src={logo_icon} alt="" />
-    <HeaderTitle>Поиск дешевых авибилетов</HeaderTitle>
-    <form action="">
-      <input type="text" placeholder="Москва" />
-      <input type="text" placeholder="Город прибытия" />
-      <input type="text" placeholder="Туда" />
-      <input type="text" placeholder="Обратно" />
-      <select name="passengers">
-        <option value="1" selected>
-          1 пассажир, эконом
-        </option>
-      </select>
-    </form>
-    <Button>Найти билеты</Button>
+    <div className="container">
+      <Logo src={logo} />
+      <HeaderTitle>Поиск дешевых авибилетов</HeaderTitle>
+      <Searchform>
+        <Input placeholder="Москва" />
+        <Input placeholder="Город прибытия" />
+        <SplitRow>
+          <Input placeholder="Туда" />
+          <Input placeholder="Обратно" />
+        </SplitRow>
+        <Input placeholder="1 пассажир, эконом" />
+        <Button>Найти билеты</Button>
+      </Searchform>
+    </div>
   </Wrapper>
 );
