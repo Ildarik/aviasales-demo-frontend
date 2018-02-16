@@ -6,8 +6,6 @@ import SpecialOffers from "./SpecialOffers";
 import Articles from "./Articles";
 import MobileApps from "./MobileApps";
 import Footer from "./Footer";
-import "normalize.css";
-import "flexboxgrid2";
 
 class App extends Component {
   render() {
