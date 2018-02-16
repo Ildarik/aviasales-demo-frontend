@@ -5,6 +5,7 @@ import TopDestinations from "./TopDestinations";
 import SpecialOffers from "./SpecialOffers";
 import Articles from "./Articles";
 import MobileApps from "./MobileApps";
+import Footer from "./Footer";
 import "normalize.css";
 import "flexboxgrid2";
 
@@ -18,6 +19,7 @@ class App extends Component {
         <SpecialOffers />
         <Articles />
         <MobileApps />
+        <Footer />
       </div>
     );
   }
