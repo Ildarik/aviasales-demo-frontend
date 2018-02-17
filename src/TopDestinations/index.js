@@ -18,6 +18,11 @@ const Wrapper = styled.section`
 const Categories = styled.div`
   margin: 30px 10px;
   display: flex;
+  flex-wrap: wrap;
+
+  @media (min-width: 768px) {
+    flex-wrap: nowrap;
+  }
 `;
 
 const CategoryIcon = styled.img`
