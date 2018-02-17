@@ -11,18 +11,28 @@ const Wrapper = styled.section``;
 
 const City = styled.div`
   margin: 10px;
+  font-size: 16px;
+  color: #5b5b5c;
 `;
 
 const Country = styled.div`
   margin: 10px;
+  font-size: 12px;
+  color: #a0b0b9;
 `;
 
 const Price = styled.div`
   margin: 10px;
+  font-size: 14px;
+  color: #00bae8;
+  text-align: right;
 `;
 
-const Date = styled.div`
+const DestinationDate = styled.div`
   margin: 10px;
+  font-size: 12px;
+  color: #a0b0b9;
+  text-align: right;
 `;
 
 const DestinationWrapper = styled.div`
@@ -41,8 +51,8 @@ class Destination extends Component {
               <Country>{this.props.country}</Country>
             </div>
             <div className="col-xs-6">
-              <Price>Найти от {this.props.price}р</Price>
-              <Date>{this.props.date}</Date>
+              <Price>Найти от {this.props.price} ₽</Price>
+              <DestinationDate>{this.props.date}</DestinationDate>
             </div>
           </div>
         </DestinationWrapper>

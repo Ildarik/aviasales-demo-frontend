@@ -32,16 +32,39 @@ const Calendar = styled.img`
 const DestinationWrapper = styled.div`
   margin: 20px;
 `;
+
 const DestinationRouteWrapper = styled.div`
   margin: 10px;
+`;
+
+const DestinationCity = styled.div`
+  font-size: 22px;
+  color: #5b5b5c;
+  margin-bottom: 5px;
+`;
+
+const Country = styled.div`
+  font-size: 12px;
+  color: #a0b0b9;
+`;
+
+const City = styled.div`
+  font-size: 16px;
+  color: #4a4a4a;
+`;
+
+const Price = styled.div`
+  font-size: 16px;
+  color: #00bae8;
+  text-align: right;
 `;
 
 function DestinationRoute(props) {
   return (
     <DestinationRouteWrapper>
       <div className="row">
-        <div className="col-xs-6">{props.city}</div>
-        <div className="col-xs-6">От {props.price} Р</div>
+        <City className="col-xs-6">{props.city}</City>
+        <Price className="col-xs-6">от {props.price} ₽</Price>
       </div>
     </DestinationRouteWrapper>
   );
@@ -55,8 +78,8 @@ function DestinationHeader(props) {
           <img src={props.flag} alt="" />
         </div>
         <div className="col-xs-10">
-          <div>{props.city}</div>
-          <div>{props.country}</div>
+          <DestinationCity>{props.city}</DestinationCity>
+          <Country>{props.country}</Country>
         </div>
       </div>
     </DestinationWrapper>
@@ -90,17 +113,17 @@ export default () => (
             <DestinationHeader
               flag={flag_ru}
               city="Симферополь (Крым)"
-              country="Крым"
+              country="КРЫМ"
             />
           </div>
           <DestinationRoutes />
         </Destination>
         <Destination>
-          <DestinationHeader flag={flag_am} city="Ереван" country="Армения" />
+          <DestinationHeader flag={flag_am} city="Ереван" country="АРМЕНИЯ" />
           <DestinationRoutes />
         </Destination>
         <Destination>
-          <DestinationHeader flag={flag_md} city="Кишинев" country="Молдавия" />
+          <DestinationHeader flag={flag_md} city="Кишинев" country="МОЛДАВИЯ" />
           <DestinationRoutes />
         </Destination>
       </Destinations>

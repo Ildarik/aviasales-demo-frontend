@@ -24,6 +24,7 @@ const CategoryText = styled.div`
   text-transform: uppercase;
   font-size: 12px;
   margin: 10px;
+  color: #00ace2;
 `;
 
 const CategoryWrapper = styled.a`
