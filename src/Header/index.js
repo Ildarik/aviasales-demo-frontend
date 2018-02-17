@@ -1,6 +1,10 @@
 import React from "react";
 import styled from "styled-components";
 import logo from "./logo.svg";
+import aero from "./aero.svg";
+import swap_places from "./swap-places.svg";
+import calendar from "./calendar.svg";
+import triangle from "./triangle.svg";
 
 const Wrapper = styled.section`
   padding-top: 10px;
@@ -26,20 +30,26 @@ const HeaderTitle = styled.h1`
 `;
 
 const Button = styled.button`
+  display: inline-block;
+
   background: #ff9241;
   color: #fff;
   width: 100%;
   margin-top: 13px;
   padding: 17px;
   border: 0;
+  font-size: 24px;
+  font-weight: 900;
 `;
 
 const Logo = styled.img``;
 
 const Input = styled.input`
   width: 100%;
+  position: relative;
   padding: 16px 14px;
   margin-bottom: 1px;
+  display: inline-block;
 `;
 
 const Searchform = styled.div`
@@ -52,20 +62,61 @@ const SplitRow = styled.div`
   display: flex;
 `;
 
+const InputWrapper = styled.div`
+  display: flex;
+  position: relative;
+  width: 100%;
+`;
+
+const Abbreviation = styled.span`
+  position: absolute;
+  font-size: 16px;
+  top: 18px;
+  right: 43px;
+  color: #a0b0b9;
+`;
+
+const InputIcon = styled.img`
+  position: absolute;
+  top: 18px;
+  right: 13px;
+`;
+
+const Triangle = styled.img`
+  position: absolute;
+  right: 13px;
+  top: 23px;
+`;
+
 export default () => (
   <Wrapper>
     <div className="container">
       <Logo src={logo} />
       <HeaderTitle>Поиск дешевых авибилетов</HeaderTitle>
       <Searchform>
-        <Input placeholder="Москва" />
+        <InputWrapper>
+          <Input placeholder="Москва" />
+          <Abbreviation>MOW</Abbreviation>
+          <InputIcon src={swap_places} />
+        </InputWrapper>
         <Input placeholder="Город прибытия" />
         <SplitRow>
-          <Input placeholder="Туда" />
-          <Input placeholder="Обратно" />
+          <InputWrapper>
+            <Input placeholder="Туда" />
+            <InputIcon src={calendar} />
+          </InputWrapper>
+          <InputWrapper>
+            <Input placeholder="Обратно" />
+            <InputIcon src={calendar} />
+          </InputWrapper>
         </SplitRow>
-        <Input placeholder="1 пассажир, эконом" />
-        <Button>Найти билеты</Button>
+        <InputWrapper>
+          <Input placeholder="1 пассажир, эконом" />
+          <Triangle src={triangle} />
+        </InputWrapper>
+        <Button>
+          Найти билеты <img src={aero} alt="" />
+        </Button>
       </Searchform>
     </div>
   </Wrapper>
