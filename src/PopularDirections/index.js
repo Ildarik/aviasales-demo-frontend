@@ -62,10 +62,8 @@ const Price = styled.div`
 function DestinationRoute(props) {
   return (
     <DestinationRouteWrapper>
-      <div className="row">
-        <City className="col-xs-6">{props.city}</City>
-        <Price className="col-xs-6">от {props.price} ₽</Price>
-      </div>
+      <City>{props.city}</City>
+      <Price>от {props.price} ₽</Price>
     </DestinationRouteWrapper>
   );
 }
@@ -88,7 +86,7 @@ function DestinationHeader(props) {
 
 function DestinationRoutes() {
   return (
-    <div className="container">
+    <div>
       <DestinationRoute city="Из Москвы" price="4 813" />
       <DestinationRoute city="Из Санкт-Петербурга" price="7 857" />
       <DestinationRoute city="Из Новосибирска" price="15 127" />
@@ -107,26 +105,36 @@ export default () => (
       <Heading>Лучшие цены на авиабилеты за последний месяц</Heading>
     </div>
     <div className="container">
-      <Destinations>
-        <Destination>
-          <div className="row">
-            <DestinationHeader
-              flag={flag_ru}
-              city="Симферополь (Крым)"
-              country="КРЫМ"
-            />
-          </div>
-          <DestinationRoutes />
-        </Destination>
-        <Destination>
-          <DestinationHeader flag={flag_am} city="Ереван" country="АРМЕНИЯ" />
-          <DestinationRoutes />
-        </Destination>
-        <Destination>
-          <DestinationHeader flag={flag_md} city="Кишинев" country="МОЛДАВИЯ" />
-          <DestinationRoutes />
-        </Destination>
-      </Destinations>
+      <div className="row">
+        <div className="col-xs-12 col-md-10 col-lg-4">
+          <Destinations>
+            <Destination>
+              <DestinationHeader
+                flag={flag_ru}
+                city="Симферополь (Крым)"
+                country="КРЫМ"
+              />
+              <DestinationRoutes />
+            </Destination>
+            <Destination>
+              <DestinationHeader
+                flag={flag_am}
+                city="Ереван"
+                country="АРМЕНИЯ"
+              />
+              <DestinationRoutes />
+            </Destination>
+            <Destination>
+              <DestinationHeader
+                flag={flag_md}
+                city="Кишинев"
+                country="МОЛДАВИЯ"
+              />
+              <DestinationRoutes />
+            </Destination>
+          </Destinations>
+        </div>
+      </div>
     </div>
     <DestinationNote>
       <div className="row center-xs">

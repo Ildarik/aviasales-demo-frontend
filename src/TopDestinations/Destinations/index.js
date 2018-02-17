@@ -39,26 +39,42 @@ const DestinationWrapper = styled.div`
   box-shadow: 0px 2px 12px rgba(0, 75, 93, 0.12);
   border-radius: 8px;
   margin: 15px;
+  display: flex;
+  flex-direction: column;
+`;
+
+const PlaceLeft = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+`;
+
+const PlaceRight = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+`;
+
+const PlaceWrapper = styled.div`
+  display: flex;
 `;
 
 class Destination extends Component {
   render() {
     return (
-      <div className="container">
-        <DestinationWrapper>
-          <img src={this.props.src} alt={this.props.city} />
-          <div className="row">
-            <div className="col-xs-6">
-              <City>{this.props.city}</City>
-              <Country>{this.props.country}</Country>
-            </div>
-            <div className="col-xs-6">
-              <Price>Найти от {this.props.price} ₽</Price>
-              <DestinationDate>{this.props.date}</DestinationDate>
-            </div>
-          </div>
-        </DestinationWrapper>
-      </div>
+      <DestinationWrapper>
+        <img src={this.props.src} alt={this.props.city} />
+        <PlaceWrapper>
+          <PlaceLeft>
+            <City>{this.props.city}</City>
+            <Country>{this.props.country}</Country>
+          </PlaceLeft>
+          <PlaceRight>
+            <Price>Найти от {this.props.price} ₽</Price>
+            <DestinationDate>{this.props.date}</DestinationDate>
+          </PlaceRight>
+        </PlaceWrapper>
+      </DestinationWrapper>
     );
   }
 }
@@ -66,7 +82,7 @@ class Destination extends Component {
 export default () => (
   <Wrapper>
     <div className="container">
-      <div className="row center">
+      <div className="row center-xs">
         <Destination
           src={krasnodar}
           city="Краснодар"

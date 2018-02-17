@@ -72,10 +72,6 @@ const Searchform = styled.div`
   padding-bottom: 88px;
 `;
 
-const SplitRow = styled.div`
-  display: flex;
-`;
-
 const InputWrapper = styled.div`
   position: relative;
   flex-basis: 100%;
