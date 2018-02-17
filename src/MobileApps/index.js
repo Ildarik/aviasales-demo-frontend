@@ -14,40 +14,69 @@ const Heading = styled.h2`
   color: #fff;
   font-size: 24px;
   font-weight: 500;
-  text-align: center;
 `;
 
 const Stars = styled.p`
   color: #fff;
   display: flex;
-  text-align: center;
+  justify-content: center;
 `;
 
 const Rating = styled.img`
-  margin-left: 20px;
   margin-right: 10px;
 `;
 
 const MobileTypeIcon = styled.img`
   margin: 10px;
+  display: inline;
 `;
+
 const MobileTypeName = styled.div`
   color: #fff;
   font-size: 14px;
   align-self: center;
   margin-top: 3px;
+  width: 50px;
 `;
 
 const MobileTypeWrapper = styled.div`
-  margin-top: 30px;
-  margin-left: 10px;
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+  }
+`;
+
+const PhoneWrapper = styled.div`
+  position: relative;
+`;
+
+const ItemWrapper = styled.div`
+  display: flex;
+`;
+
+const Iphone = styled.img`
+  display: block;
+  position: absolute;
+  width: 132px;
+  height: 143px;
+  bottom: 0;
+  left: 0;
+
+  @media (min-width: 768px) {
+    width: 160px;
+    height: 208px;
+  }
 `;
 
 function MobileType(props) {
   return (
-    <div className="row">
-      <MobileTypeIcon src={props.icon} />
-      <MobileTypeName>{props.name}</MobileTypeName>
+    <div>
+      <ItemWrapper>
+        <MobileTypeIcon src={props.icon} />
+        <MobileTypeName>{props.name}</MobileTypeName>
+      </ItemWrapper>
     </div>
   );
 }
@@ -55,18 +84,21 @@ function MobileType(props) {
 export default () => (
   <Wrapper>
     <div className="container">
-      <div className="row">
-        <Heading>Скачай мобильное приложение Aviasales.ru</Heading>
-      </div>
-      <Stars>
-        <Rating src={rating} alt="" />
-        <div>Более 103 000 оценок</div>
-      </Stars>
-      <div className="row">
-        <div className="col-xs-6">
-          <img src={mobile} alt="Mobile phone" />
+      <div className="row center-xs">
+        <div className="col-xs-12 col-md-8">
+          <Heading>Скачай мобильное приложение Aviasales.ru</Heading>
+          <Stars>
+            <Rating src={rating} alt="" />
+            <div>Более 103 000 оценок</div>
+          </Stars>
         </div>
-        <div className="col-xs-6">
+      </div>
+
+      <div className="row">
+        <PhoneWrapper>
+          <Iphone src={mobile} alt="Mobile phone" />
+        </PhoneWrapper>
+        <div className="col-xs-6 col-md-8 col-xs-offset-6 col-md-offset-4">
           <MobileTypeWrapper>
             <MobileType icon={apple} name="iPhone или iPad" />
             <MobileType icon={android} name="Android" />

@@ -23,18 +23,24 @@ const HeadingIcon = styled.img`
   margin-right: 5px;
 `;
 
+const Post = styled.div`
+  margin-bottom: 20px;
+`;
+
 function Article(props) {
   return (
     <div className="container">
       <div className="row">
-        <ArticleHeading>
-          <HeadingIcon src={props.icon} alt="" />
-          {props.heading}
-        </ArticleHeading>
+        <Post>
+          <ArticleHeading>
+            <HeadingIcon src={props.icon} alt="" />
+            {props.heading}
+          </ArticleHeading>
+          <Paragraph>
+            {props.paragraph} <MoreInfo>Подробее</MoreInfo>
+          </Paragraph>
+        </Post>
       </div>
-      <Paragraph>
-        {props.paragraph} <MoreInfo>Подробее</MoreInfo>
-      </Paragraph>
     </div>
   );
 }
