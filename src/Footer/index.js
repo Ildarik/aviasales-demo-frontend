@@ -61,7 +61,7 @@ const Copyright = styled.div`
 export default () => (
   <div className="container">
     <div className="row">
-      <div className="col-xs-6">
+      <div className="col-xs-6 col-md-3 col-lg-2">
         <nav>
           <LinksTitle>СТРАНЫ</LinksTitle>
           <Links>
@@ -75,7 +75,7 @@ export default () => (
           </Links>
         </nav>
       </div>
-      <div className="col-xs-6">
+      <div className="col-xs-6 col-md-3 col-lg-2">
         <nav>
           <LinksTitle>ГОРОДА</LinksTitle>
           <Links>
@@ -89,7 +89,7 @@ export default () => (
           </Links>
         </nav>
       </div>
-      <div className="col-xs-6">
+      <div className="col-xs-6 col-md-3 col-lg-2">
         <nav>
           <Links>
             <LinksTitle>АВИАКОМПАНИИ</LinksTitle>
@@ -103,7 +103,7 @@ export default () => (
           </Links>
         </nav>
       </div>
-      <div className="col-xs-6">
+      <div className="col-xs-6 col-md-3 col-lg-2">
         <nav>
           <Links>
             <LinksTitle>АЭРОПОРТЫ</LinksTitle>
@@ -117,7 +117,7 @@ export default () => (
           </Links>
         </nav>
       </div>
-      <div className="col-xs-6">
+      <div className="col-xs-6 col-md-3 col-lg-2">
         <nav>
           <Links>
             <LinksTitle>НАПРАВЛЕНИЯ</LinksTitle>
@@ -130,7 +130,7 @@ export default () => (
           </Links>
         </nav>
       </div>
-      <div className="col-xs-6">
+      <div className="col-xs-6 col-md-3 col-lg-2">
         <nav>
           <LinksTitle>СЕРВИСЫ</LinksTitle>
           <Links>
@@ -162,7 +162,7 @@ export default () => (
         </div>
       </div>
       <div className="container">
-        <div className="row">
+        <div className="row start-xs">
           <SocialLink>
             <SocialIcon src={vk} alt="" />
             Вконтакте
