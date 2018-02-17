@@ -5,8 +5,6 @@ import flag_ru from "./flag-ru.svg";
 import flag_am from "./flag-am.svg";
 import flag_md from "./flag-md.svg";
 
-const Wrapper = styled.section``;
-
 const Heading = styled.h2`
   font-size: 18px;
   font-style: normal;
