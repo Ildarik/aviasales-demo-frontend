@@ -138,7 +138,7 @@ export default () => (
       </div>
     </div>
     <div className="row">
-      <div className="col-xs-12 col-lg-10">
+      <div className="col-xs-12 col-lg-12">
         <DestinationNote>
           <div className="row center-xs">
             <div className="col-xs-12 col-md-10 col-lg-6">
