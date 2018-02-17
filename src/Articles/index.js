@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import plane from "./plane.svg";
-import at from "./at.svg";
-import list from "./list.svg";
+import plane from "./plane.png";
+import at from "./at.png";
+import list from "./list.png";
 
 const ArticleHeading = styled.h2`
   font-size: 13px;
@@ -19,12 +19,18 @@ const Paragraph = styled.p`
   line-height: 20px;
 `;
 
+const HeadingIcon = styled.img`
+  margin-right: 5px;
+`;
+
 function Article(props) {
   return (
     <div className="container">
       <div className="row">
-        <img src={props.icon} alt="" />
-        <ArticleHeading>{props.heading}</ArticleHeading>
+        <ArticleHeading>
+          <HeadingIcon src={props.icon} alt="" />
+          {props.heading}
+        </ArticleHeading>
       </div>
       <Paragraph>
         {props.paragraph} <MoreInfo>Подробее</MoreInfo>
