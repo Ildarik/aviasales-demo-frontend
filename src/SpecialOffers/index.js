@@ -55,6 +55,7 @@ const OfferDescription = styled.div`
   background: #fff;
   padding: 20px 10px;
   font-size: 12px;
+  min-height: 92px;
 `;
 
 const OfferWrapper = styled.div`
@@ -98,6 +99,7 @@ const HeadingIcon = styled.div`
 
 const Footer = styled.div`
   margin: 20px 20px;
+  padding-bottom: 20px;
   font-size: 16px;
   color: #fff;
   text-align: center;
@@ -137,40 +139,48 @@ function Offer(props) {
 export default () => (
   <Wrapper>
     <div className="container">
-      <div className="row">
+      <div className="row center-xs">
         <Heading>Спецпредложения на авиабилеты</Heading>
       </div>
-      <Offer
-        heading="Билеты от 499 рублей!"
-        logo={pobeda}
-        price="499"
-        days="45"
-        description="Билеты от 499 рублей! Специальное предложение от авиакомпании Победа"
-      />
-      <Offer
-        heading="В Нью-Йорк от 20 680 ₽"
-        alliance={alliance}
-        logo={lufthansa}
-        price="20 680"
-        days="19"
-        description="Из Москвы в США от 20680 рублей! Специальное предложение от авиакомпании Lufthansa"
-      />
-      <Offer
-        heading="В Лос-Анджелес от…"
-        alliance={alliance}
-        logo={lufthansa}
-        price="20 360"
-        days="19"
-        description="Из Москвы в США от 22360 рублей! Специальное предложение от авиакомпании Lufthansa"
-      />
-      <div className="container">
-        <div className="row">
-          <Footer>
-            <AllOffers>Смотреть все спецпредложения</AllOffers>
-            <div>* средняя цена по направлению</div>
-          </Footer>
+      <div className="row center-xs">
+        <div className="col-xs-12 col-md-4 col-xl-3">
+          <Offer
+            heading="Билеты от 499 рублей!"
+            logo={pobeda}
+            price="499"
+            days="45"
+            description="Билеты от 499 рублей! Специальное предложение от авиакомпании Победа"
+          />
+        </div>
+        <div className="col-xs-12 col-md-4 col-xl-3">
+          <Offer
+            heading="В Нью-Йорк от 20 680 ₽"
+            alliance={alliance}
+            logo={lufthansa}
+            price="20 680"
+            days="19"
+            description="Из Москвы в США от 20680 рублей! Специальное предложение от авиакомпании Lufthansa"
+          />
+        </div>
+        <div className="col-xs-12 col-md-4 col-xl-3">
+          <Offer
+            heading="В Лос-Анджелес от…"
+            alliance={alliance}
+            logo={lufthansa}
+            price="20 360"
+            days="19"
+            description="Из Москвы в США от 22360 рублей! Специальное предложение от авиакомпании Lufthansa"
+          />
         </div>
       </div>
+      <Footer>
+        <div className="container">
+          <div className="row between-xs">
+            <AllOffers>Смотреть все спецпредложения</AllOffers>
+            <div>* средняя цена по направлению</div>
+          </div>
+        </div>{" "}
+      </Footer>
     </div>
   </Wrapper>
 );
