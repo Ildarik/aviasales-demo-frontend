@@ -143,7 +143,7 @@ export default () => (
         <Heading>Спецпредложения на авиабилеты</Heading>
       </div>
       <div className="row center-xs">
-        <div className="col-xs-12 col-md-4 col-xl-3">
+        <div className="col-xs-12 col-md-4 col-xl-4">
           <Offer
             heading="Билеты от 499 рублей!"
             logo={pobeda}
@@ -152,7 +152,7 @@ export default () => (
             description="Билеты от 499 рублей! Специальное предложение от авиакомпании Победа"
           />
         </div>
-        <div className="col-xs-12 col-md-4 col-xl-3">
+        <div className="col-xs-12 col-md-4 col-xl-4">
           <Offer
             heading="В Нью-Йорк от 20 680 ₽"
             alliance={alliance}
@@ -162,7 +162,7 @@ export default () => (
             description="Из Москвы в США от 20680 рублей! Специальное предложение от авиакомпании Lufthansa"
           />
         </div>
-        <div className="col-xs-12 col-md-4 col-xl-3">
+        <div className="col-xs-12 col-md-4 col-xl-4">
           <Offer
             heading="В Лос-Анджелес от…"
             alliance={alliance}

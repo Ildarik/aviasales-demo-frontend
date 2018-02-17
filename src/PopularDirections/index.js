@@ -137,20 +137,24 @@ export default () => (
         </div>
       </div>
     </div>
-    <DestinationNote>
-      <div className="row center-xs">
-        <div className="col-xs-12 col-md-10 col-lg-6">
-          Мы знаем, где купить авиабилеты дешево. Билеты на самолет в 220 стран
-          мира. Поиск и сравнение цен на авиабилеты среди 100 агентств и 728
-          авиакомпаний.
-        </div>
+    <div className="row">
+      <div className="col-xs-12 col-lg-10">
+        <DestinationNote>
+          <div className="row center-xs">
+            <div className="col-xs-12 col-md-10 col-lg-6">
+              Мы знаем, где купить авиабилеты дешево. Билеты на самолет в 220
+              стран мира. Поиск и сравнение цен на авиабилеты среди 100 агентств
+              и 728 авиакомпаний.
+            </div>
+          </div>
+        </DestinationNote>
+        <DestinationNoteSmall>
+          <div className="row center-xs">
+            Цены, найденные пользователями за последние 48 часов, не являются
+            офертой.
+          </div>
+        </DestinationNoteSmall>
       </div>
-    </DestinationNote>
-    <DestinationNoteSmall>
-      <div className="row center-xs">
-        Цены, найденные пользователями за последние 48 часов, не являются
-        офертой.
-      </div>
-    </DestinationNoteSmall>
+    </div>
   </div>
 );
