@@ -14,12 +14,16 @@ import "flexboxgrid2";
 const Wrapper = styled.section`
   background: #f8fcff;
 `;
+
 const Categories = styled.div`
   margin: 30px 10px;
+  display: flex;
 `;
+
 const CategoryIcon = styled.img`
   margin: 10px;
 `;
+
 const CategoryText = styled.div`
   text-transform: uppercase;
   font-size: 12px;
@@ -44,8 +48,13 @@ function Category(props) {
 const Title = styled.h2`
   font-weight: 500;
   font-size: 18px;
-  line-height: 1.5;
+  line-height: 24px;
   font-style: normal;
+
+  @media (min-width: 768px) {
+    font-size: 24px;
+    line-height: 36px;
+  }
 `;
 
 const Compass = styled.img`
@@ -69,34 +78,24 @@ export default () => (
         </div>
       </div>
       <div className="row center-xs">
-        <Title>
-          Популярные направления перелетов из города <City>Москва</City>
-          <Pencil src={pencil} alt="" />
-        </Title>
+        <div className="col-xs-10 col-md-6 col-lg-4">
+          <Title>
+            Популярные направления перелетов из города <City>Москва</City>
+            <Pencil src={pencil} alt="" />
+          </Title>
+        </div>
       </div>
-      <div className="container">
-        <Categories>
-          <div className="row center-xs">
-            <div className="col-xs-4 col-md-2 col-lg-1">
-              <Category src={common} text="куда угодно" />
-            </div>
-            <div className="col-xs-4 col-md-2 col-lg-1">
-              <Category src={beach} text="солнце и море" />
-            </div>
-            <div className="col-xs-4 col-md-2 col-lg-1">
-              <Category src={shopping} text="шопинг, город" />
-            </div>
-            <div className="col-xs-4 col-md-2 col-lg-1">
-              <Category src={history} text="культура и история" />
-            </div>
-            <div className="col-xs-4 col-md-2 col-lg-1">
-              <Category src={nightlife} text="ночная жизнь" />
-            </div>
-            <div className="col-xs-4 col-md-2 col-lg-1">
-              <Category src={family} text="отдых с детьми" />
-            </div>
-          </div>
-        </Categories>
+      <div className="row center-xs">
+        <div className="col-xs-12 col-md-10 col-lg-6">
+          <Categories>
+            <Category src={common} text="куда угодно" />
+            <Category src={beach} text="солнце и море" />
+            <Category src={shopping} text="шопинг, город" />
+            <Category src={history} text="культура и история" />
+            <Category src={nightlife} text="ночная жизнь" />
+            <Category src={family} text="отдых с детьми" />
+          </Categories>
+        </div>
       </div>
       <Destinations />
     </div>
