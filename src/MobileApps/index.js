@@ -55,7 +55,7 @@ function MobileType(props) {
 export default () => (
   <Wrapper>
     <div className="container">
-      <div class="row">
+      <div className="row">
         <Heading>Скачай мобильное приложение Aviasales.ru</Heading>
       </div>
       <Stars>

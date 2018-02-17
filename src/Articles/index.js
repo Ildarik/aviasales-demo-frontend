@@ -34,7 +34,7 @@ function Article(props) {
 }
 
 export default () => (
-  <div class="container">
+  <div className="container">
     <Article
       icon={plane}
       heading="КАК КУПИТЬ ДЕШЕВЫЕ АВИАБИЛЕТЫ?"
