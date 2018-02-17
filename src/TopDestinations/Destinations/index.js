@@ -71,42 +71,42 @@ export default () => (
           src={krasnodar}
           city="Краснодар"
           country="РОССИЯ"
-          price="1212"
+          price="1 212"
           date="18 марта"
         />
         <Destination
           src={adler}
           city="Сочи (Адлер)"
           country="РОССИЯ"
-          price="1334"
+          price="1 334"
           date="27 марта"
         />
         <Destination
           src={spb}
           city="Санкт-Петербург"
           country="РОССИЯ"
-          price="1508"
+          price="1 508"
           date="19 февраля"
         />
         <Destination
           src={minvody}
           city="Минеральные воды"
           country="РОССИЯ"
-          price="2074"
+          price="2 074"
           date="13 марта"
         />
         <Destination
           src={krym}
           city="Симферополь (Крым)"
           country="КРЫМ"
-          price="2407"
+          price="2 407"
           date="13 марта"
         />
         <Destination
           src={barsa}
           city="Барселона"
           country="ИСПАНИЯ"
-          price="4247"
+          price="4 247"
           date="24 марта"
         />
       </div>
