@@ -36,6 +36,8 @@ const DestinationDate = styled.div`
 `;
 
 const DestinationWrapper = styled.div`
+  box-shadow: 0px 2px 12px rgba(0, 75, 93, 0.12);
+  border-radius: 8px;
   margin: 15px;
 `;
 
