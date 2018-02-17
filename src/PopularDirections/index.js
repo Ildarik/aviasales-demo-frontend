@@ -10,8 +10,6 @@ const Heading = styled.h2`
   font-style: normal;
 `;
 
-const Destinations = styled.div``;
-
 const Destination = styled.div``;
 
 const DestinationNote = styled.div`
@@ -31,16 +29,20 @@ const Calendar = styled.img`
 
 const DestinationWrapper = styled.div`
   margin: 20px;
+  display: flex;
 `;
 
 const DestinationRouteWrapper = styled.div`
   margin: 10px;
+  display: flex;
+  justify-content: space-between;
 `;
 
 const DestinationCity = styled.div`
   font-size: 22px;
   color: #5b5b5c;
   margin-bottom: 5px;
+  font-weight: bold;
 `;
 
 const Country = styled.div`
@@ -57,7 +59,12 @@ const Price = styled.div`
   font-size: 16px;
   color: #00bae8;
   text-align: right;
+  align-self: flex-end;
 `;
+
+const Flag = styled.img``;
+
+const DestinationHeading = styled.div``;
 
 function DestinationRoute(props) {
   return (
@@ -71,15 +78,11 @@ function DestinationRoute(props) {
 function DestinationHeader(props) {
   return (
     <DestinationWrapper>
-      <div className="row middle-xs">
-        <div className="col-xs-2">
-          <img src={props.flag} alt="" />
-        </div>
-        <div className="col-xs-10">
-          <DestinationCity>{props.city}</DestinationCity>
-          <Country>{props.country}</Country>
-        </div>
-      </div>
+      <Flag src={props.flag} alt="" />
+      <DestinationHeading>
+        <DestinationCity>{props.city}</DestinationCity>
+        <Country>{props.country}</Country>
+      </DestinationHeading>
     </DestinationWrapper>
   );
 }
@@ -105,42 +108,42 @@ export default () => (
       <Heading>Лучшие цены на авиабилеты за последний месяц</Heading>
     </div>
     <div className="container">
-      <div className="row">
+      <div className="row center-xs">
         <div className="col-xs-12 col-md-10 col-lg-4">
-          <Destinations>
-            <Destination>
-              <DestinationHeader
-                flag={flag_ru}
-                city="Симферополь (Крым)"
-                country="КРЫМ"
-              />
-              <DestinationRoutes />
-            </Destination>
-            <Destination>
-              <DestinationHeader
-                flag={flag_am}
-                city="Ереван"
-                country="АРМЕНИЯ"
-              />
-              <DestinationRoutes />
-            </Destination>
-            <Destination>
-              <DestinationHeader
-                flag={flag_md}
-                city="Кишинев"
-                country="МОЛДАВИЯ"
-              />
-              <DestinationRoutes />
-            </Destination>
-          </Destinations>
+          <Destination>
+            <DestinationHeader
+              flag={flag_ru}
+              city="Симферополь (Крым)"
+              country="КРЫМ"
+            />
+            <DestinationRoutes />
+          </Destination>
+        </div>
+        <div className="col-xs-12 col-md-10 col-lg-4">
+          <Destination>
+            <DestinationHeader flag={flag_am} city="Ереван" country="АРМЕНИЯ" />
+            <DestinationRoutes />
+          </Destination>
+        </div>
+        <div className="col-xs-12 col-md-10 col-lg-4">
+          <Destination>
+            <DestinationHeader
+              flag={flag_md}
+              city="Кишинев"
+              country="МОЛДАВИЯ"
+            />
+            <DestinationRoutes />
+          </Destination>
         </div>
       </div>
     </div>
     <DestinationNote>
       <div className="row center-xs">
-        Мы знаем, где купить авиабилеты дешево. Билеты на самолет в 220 стран
-        мира. Поиск и сравнение цен на авиабилеты среди 100 агентств и 728
-        авиакомпаний.
+        <div className="col-xs-12 col-md-10 col-lg-6">
+          Мы знаем, где купить авиабилеты дешево. Билеты на самолет в 220 стран
+          мира. Поиск и сравнение цен на авиабилеты среди 100 агентств и 728
+          авиакомпаний.
+        </div>
       </div>
     </DestinationNote>
     <DestinationNoteSmall>
