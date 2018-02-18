@@ -6,6 +6,7 @@ import SpecialOffers from "./SpecialOffers";
 import Articles from "./Articles";
 import MobileApps from "./MobileApps";
 import Footer from "./Footer";
+import Agencies from "./Agencies";
 
 class App extends Component {
   render() {
@@ -15,6 +16,7 @@ class App extends Component {
         <TopDestinations />
         <PopularDirections />
         <SpecialOffers />
+        <Agencies />
         <Articles />
         <MobileApps />
         <Footer />
