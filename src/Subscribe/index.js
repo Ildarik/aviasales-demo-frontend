@@ -104,7 +104,7 @@ export default () => (
               </Paragraph>
             </div>
             <div className="row top-lg">
-              <div className="col-xs-6 col-xl-5 col-md-offset-3" />
+              <div className="col-xl-5 col-md-offset-3" />
               <ActionsWrapper>
                 <SocialLinks>
                   <Link src={vk} alt={vk} />

@@ -68,6 +68,11 @@ const Iphone = styled.img`
     width: 160px;
     height: 208px;
   }
+
+  @media (min-width: 1200px) {
+    width: 140px;
+    height: 180px;
+  }
 `;
 
 function MobileType(props) {
