@@ -6,10 +6,17 @@ import onetwotrip from "./onetwotrip.png";
 import koreanair from "./koreanair.png";
 import elal from "./elal.png";
 
-const AgencyLogo = styled.img``;
+const AgencyLogo = styled.img`
+  margin: 10px;
+`;
 
 const Wrapper = styled.div`
   margin: 50px;
+  display: None;
+
+  @media (min-width: 768px) {
+    display: block;
+  }
 `;
 
 const Heading = styled.h2`
